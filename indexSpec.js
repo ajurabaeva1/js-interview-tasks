@@ -322,3 +322,43 @@ describe('Function isPalindrome return true if string is palindrome, false if no
         assert.equal(result, true);
     });
 })
+
+import missing from './tasks/Missing';
+
+describe('Function missing return number that not exist in sequence. missing(array);', () => {
+    it('missing([])  => undefined', () => {
+        let result = missing([]);
+
+        assert.equal(result, 'undefined');
+    });
+
+    it('missing([1, 4, 3]) => 2', () => {
+        let result = missing([1, 4, 3]);
+
+        assert.equal(result, 2);
+    });
+
+    it('missing([2, 3, 4]) => 1', () => {
+        let result = missing([2, 3, 4]);
+
+        assert.equal(result, 1);
+    });
+
+    it('missing([5, 1, 4, 2]) => 3', () => {
+        let result = missing([5, 1, 4, 2]);
+
+        assert.equal(result, 3);
+    });
+
+    it('missing([1, 2, 3, 4]) => undefined', () => {
+        let result = missing([1, 2, 3, 4]);
+
+        assert.equal(result, 'undefined');
+    });
+
+    it('missing([2, 3, 7, 6, 1, 4]) => 5', () => {
+        let result = missing([2, 3, 7, 6, 1, 4]);
+
+        assert.equal(result, 5);
+    });
+})
