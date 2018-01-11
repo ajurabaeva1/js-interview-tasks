@@ -272,3 +272,53 @@ describe('My filter function, like Array.filter().', () => {
     })
 
 });
+
+import isSorted from './tasks/Issorted';
+
+describe('Function isSorted return true if array is sorted, false if not. isSorted(array)', () => {
+    it('isSorted([]) => true', () => {
+        let result = isSorted([]);
+
+        assert.equal(result, true);
+    });
+
+    it('isSorted([-Infinity, -5, 0, 3, 9]) => true', () => {
+        let result = isSorted([-Infinity, -5, 0, 3, 9]);
+
+        assert.equal(result, true);
+    });
+
+    it('isSorted([3, 9, -3, 10]) => false', () => {
+        let result = isSorted([3, 9, -3, 10]);
+
+        assert.equal(result, false);
+    });
+})
+
+import isPalindrome from './tasks/Is-Palindrome';
+
+describe('Function isPalindrome return true if string is palindrome, false if not. isSorted(array)', () => {
+    it('isPalindrome("") => true', () => {
+        let result = isPalindrome('');
+
+        assert.equal(result, true);
+    });
+
+    it('isPalindrome("abcdcba") => true', () => {
+        let result = isPalindrome('abcdcba');
+
+        assert.equal(result, true);
+    });
+
+    it('isPalindrome("abcd") => false', () => {
+        let result = isPalindrome("abcd");
+
+        assert.equal(result, false);
+    });
+
+    it('isPalindrome("A man a plan a canal Panama") => true', () => {
+        let result = isPalindrome("A man a plan a canal Panama");
+
+        assert.equal(result, true);
+    });
+})
