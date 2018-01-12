@@ -408,3 +408,31 @@ describe('Function to revers string, without String.revers(). reverse(string)', 
         });
     })
 })
+
+import indexOf from './tasks/IndexOf';
+
+describe('Function indexOf like Array.indexOf. indexOf(array, searchElement)', () => {
+    it('indexOf([1, 2, 3], 1) => 0', () => {
+        let result = indexOf([1, 2, 3], 1);
+
+        assert.equal(result, 0);
+    });
+
+    it('indexOf([1, 2, 3], 4) => -1', () => {
+        let result = indexOf([1, 2, 3], 4);
+
+        assert.equal(result, -1);
+    });
+
+    it('indexOf([], 4) => -1', () => {
+        let result = indexOf([], 4);
+
+        assert.equal(result, -1);
+    });
+
+    it('indexOf([4,5,3,2,5,6,2], 6) => -1', () => {
+        let result = indexOf([4,5,3,2,5,6,2], 6);
+
+        assert.equal(result, 5);
+    });
+})
