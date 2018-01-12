@@ -361,4 +361,50 @@ describe('Function missing return number that not exist in sequence. missing(arr
 
         assert.equal(result, 5);
     });
+});
+
+import {reverse, reverseWithLoop, reverseWithRecursion} from './tasks/Reverse';
+
+describe('Function to revers string, without String.revers(). reverse(string)', () => {
+    describe('With Array (split,reduce,join). reverse(string)', () => {
+        it('reverse("") => ""', () => {
+            let result = reverse('');
+    
+            assert.equal(result, '');
+        });
+    
+        it('reverse("abcdef") => "fedcba"', () => {
+            let result = reverse('abcdef');
+    
+            assert.equal(result, 'fedcba');
+        });
+    })
+
+    describe('With loop. reverseWithLoop(string)', () => {
+        it('reverseWithLoop("") => ""', () => {
+            let result = reverseWithLoop('');
+    
+            assert.equal(result, '');
+        });
+    
+        it('reverseWithLoop("abcdef") => "fedcba"', () => {
+            let result = reverseWithLoop('abcdef');
+    
+            assert.equal(result, 'fedcba');
+        });
+    })
+
+    describe('With recursion. reverseWithLoop(string)', () => {
+        it('reverseWithRecursion("") => ""', () => {
+            let result = reverseWithRecursion('');
+    
+            assert.equal(result, '');
+        });
+    
+        it('reverseWithRecursion("abcdef") => "fedcba"', () => {
+            let result = reverseWithRecursion('abcdef');
+    
+            assert.equal(result, 'fedcba');
+        });
+    })
 })
