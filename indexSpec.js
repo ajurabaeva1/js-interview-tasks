@@ -436,3 +436,67 @@ describe('Function indexOf like Array.indexOf. indexOf(array, searchElement)', (
         assert.equal(result, 5);
     });
 })
+
+import isBalanced from './tasks/IsBalanced';
+
+describe('Function isBalanced for braces (}{), isBalanced(string)', () => {
+    it("isBalanced('}{') => false", () => {
+        let result = isBalanced('}{');
+
+        assert.equal(result, false);
+    })
+
+    it("isBalanced('{{}') => false", () => {
+        let result = isBalanced('{{}');
+
+        assert.equal(result, false);
+    })
+
+    it("isBalanced('}{}{}{') => false", () => {
+        let result = isBalanced('}{}{}{');
+
+        assert.equal(result, false);
+    })
+
+    it("isBalanced('{}{{}}') => true", () => {
+        let result = isBalanced('{}{{}}');
+
+        assert.equal(result, true);
+    })
+
+    it("isBalanced('a{}}sdfas}asdf') => false", () => {
+        let result = isBalanced('a{}}sdfas}asdf');
+
+        assert.equal(result, false);
+    })
+
+    it("isBalanced('') => false", () => {
+        let result = isBalanced('');
+
+        assert.equal(result, false);
+    })
+
+    it("isBalanced('{}{}') => true", () => {
+        let result = isBalanced('{}{}');
+
+        assert.equal(result, true);
+    })
+
+    it("isBalanced('foo { bar { baz } boo }') => true", () => {
+        let result = isBalanced('foo { bar { baz } boo }');
+
+        assert.equal(result, true);
+    })
+
+    it("isBalanced('foo { bar { baz }') => false", () => {
+        let result = isBalanced('foo { bar { baz }');
+
+        assert.equal(result, false);
+    })
+
+    it("isBalanced('foo { bar } }') => false", () => {
+        let result = isBalanced('foo { bar } }');
+
+        assert.equal(result, false);
+    })
+})
