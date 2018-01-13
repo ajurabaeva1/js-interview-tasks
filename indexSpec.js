@@ -527,3 +527,47 @@ describe('Function isBalanced2 work with }{, ][, )(, isBalanced2(string)', () =>
     })
 })
 
+import uniqInArray from './tasks/Uniq-for-array';
+
+describe('Function find unique elements in array. uniqInarray(array)', () => {
+    it('uniqInarray([]) => []', () => {
+        let result = uniqInArray([]);
+
+        expect(result).to.deep.equal([]);
+    })
+
+    it('uniqInarray([1, 4, 2, 2, 3, 4, 8]) => [1, 4, 2, 3, 8]', () => {
+        let result = uniqInArray([1, 4, 2, 2, 3, 4, 8]);
+
+        expect(result).to.deep.equal([1, 4, 2, 3, 8]);
+    })
+
+    it('uniqInarray([1,1,1,1,1,1,1,1]) => [1]', () => {
+        let result = uniqInArray([1,1,1,1,1,1,1,1]);
+
+        expect(result).to.deep.equal([1]);
+    })
+});
+
+import intersection from './tasks/Intersection';
+
+describe('Intersection function for 2 arrays. intersection(array_1, array_2)', () => {
+    it('intersection([1, 5, 4, 2], [8, 91, 4, 1, 3]) => [4, 1]', () => {
+        let result = intersection([1, 5, 4, 2], [8, 91, 4, 1, 3]);
+
+        expect(result).to.deep.equal([4, 1]);
+    })
+
+    it('intersection([1, 5, 4, 2], [7, 12]) => []', () => {
+        let result = intersection([1, 5, 4, 2], [7, 12]);
+
+        expect(result).to.deep.equal([]);
+    })
+
+    it('intersection([], [7, 12]) => []', () => {
+        let result = intersection([], []);
+
+        expect(result).to.deep.equal([]);
+    })
+});
+
