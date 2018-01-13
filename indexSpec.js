@@ -437,7 +437,7 @@ describe('Function indexOf like Array.indexOf. indexOf(array, searchElement)', (
     });
 })
 
-import {isBalanced, isBalanced2} from './tasks/IsBalanced';
+import {isBalanced, isBalanced2, isBalancedMap} from './tasks/IsBalanced';
 
 describe('Function isBalanced for braces (}{), isBalanced(string)', () => {
     it("isBalanced('}{') => false", () => {
@@ -514,9 +514,16 @@ describe('Function isBalanced2 work with }{, ][, )(, isBalanced2(string)', () =>
         assert.equal(result, false);
     })
 
-    it("isBalanced2('foo { (bar [baz] } )') => true", () => {
+    it("isBalanced2('foo { (bar [baz] } )') => false", () => {
         let result = isBalanced2('foo { (bar [baz] } )');
+
+        assert.equal(result, false);
+    })
+
+    it("isBalanced2('foo { bar { baz } boo }') => true", () => {
+        let result = isBalanced2('foo { bar { baz } boo }');
 
         assert.equal(result, true);
     })
 })
+

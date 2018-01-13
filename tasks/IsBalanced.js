@@ -24,11 +24,39 @@ function isBalanced(string) {
 };
 
 function isBalanced2(string) {
-    let result = [];
-    result.push(isBalancedStatick(string, '{', '}'));
-    result.push(isBalancedStatick(string, '(', ')'));
-    result.push(isBalancedStatick(string, '[', ']'));
-    return result.every(el => el);
+
+    const brackets = new Map();
+    brackets.set(']', '[');
+    brackets.set('}', '{');
+    brackets.set(')', '(');
+
+    let close = [...brackets.keys()],
+        open  = [...brackets.values()],
+        tmp   = [];
+
+    /**
+     * close = [']', '}', ')'];
+     * open  = ['[', '{', '('];
+     */
+
+    for(let i = 0; i < string.length; i++) {
+        let ch = string[i];
+
+        if(~open.indexOf(ch)) {
+            tmp.push(ch);
+        } else if (~close.indexOf(ch)){
+            let expected = brackets.get(ch);
+            if(tmp.length === 0 || (tmp.pop() !== expected)) {
+                return false;
+            }
+        } else {
+            continue;
+        }
+    }
+
+    return (tmp.length === 0);
+
 }
+
 
 export {isBalanced, isBalanced2};
