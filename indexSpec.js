@@ -571,3 +571,21 @@ describe('Intersection function for 2 arrays. intersection(array_1, array_2)', (
     })
 });
 
+import permute from './tasks/Permute';
+
+describe('Function permute for finding all permutation of string, permute(string)', () => {
+    it("permute('') => []", () => {
+        let result = permute('');
+
+        expect(result).to.deep.equal([]);
+    })
+
+    it("permute('abc') => ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']", () => {
+        let result = permute('abc');
+       
+        let test = ['abc', 'acb', 'bac', 'bca', 'cab', 'cba'];
+        assert.includeDeepMembers(result, test)
+    })
+
+});
+
