@@ -589,3 +589,54 @@ describe('Function permute for finding all permutation of string, permute(string
 
 });
 
+import LinkedList from './tasks/LikedList';
+
+describe('class LinkedList, LinkedList(args)', () => {
+    describe('let list = new LinkedList(1,2,3);', () => {
+
+        let list = new LinkedList(1, 2, 3);
+
+        it('list.add(4) => undefined', () => {
+            
+            assert.equal(list.add(4), undefined);
+
+        });
+
+        it('list.add(5) => undefined', () => {
+            
+            assert.equal(list.add(5), undefined);
+
+        });
+
+        it('list.add(77) => undefined', () => {
+            
+            assert.equal(list.add(77), undefined);
+
+        });
+
+        it('list.has(1) => true', () => {
+        
+            assert.equal(list.has(1), true);
+
+        });
+
+        it('list.has(4) => true', () => {
+            
+            assert.equal(list.has(4), true);
+
+        });
+
+        it('list.has(6) => false', () => {
+            
+            assert.equal(list.has(6), false);
+
+        });
+
+        it('list.has(77) => true', () => {
+            
+            assert.equal(list.has(77), true);
+
+        });
+    });
+});
+
