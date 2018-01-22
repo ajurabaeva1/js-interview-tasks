@@ -18,6 +18,7 @@ class LinkedList {
     }
     has(item) {
         let current = this.head;
+        let res = false;
         while(current) {
             if(current.data == item) return true;
             current = current.next;

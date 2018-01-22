@@ -4,7 +4,7 @@ module.exports = {
     entry: './indexSpec.js',
     output: {
         path: path.resolve(__dirname, 'build'),
-       // publicPath: '/assets/',
+        publicPath: '/assets/',
         filename: './indexSpec.js'
     }
 }
