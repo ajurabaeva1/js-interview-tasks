@@ -363,19 +363,19 @@ describe('Function missing return number that not exist in sequence. missing(arr
     });
 });
 
-import {reverse, reverseWithLoop, reverseWithRecursion} from './tasks/Reverse';
+import { reverse, reverseWithLoop, reverseWithRecursion } from './tasks/Reverse';
 
 describe('Function to revers string, without String.revers(). reverse(string)', () => {
     describe('With Array (split,reduce,join). reverse(string)', () => {
         it('reverse("") => ""', () => {
             let result = reverse('');
-    
+
             assert.equal(result, '');
         });
-    
+
         it('reverse("abcdef") => "fedcba"', () => {
             let result = reverse('abcdef');
-    
+
             assert.equal(result, 'fedcba');
         });
     })
@@ -383,13 +383,13 @@ describe('Function to revers string, without String.revers(). reverse(string)', 
     describe('With loop. reverseWithLoop(string)', () => {
         it('reverseWithLoop("") => ""', () => {
             let result = reverseWithLoop('');
-    
+
             assert.equal(result, '');
         });
-    
+
         it('reverseWithLoop("abcdef") => "fedcba"', () => {
             let result = reverseWithLoop('abcdef');
-    
+
             assert.equal(result, 'fedcba');
         });
     })
@@ -397,13 +397,13 @@ describe('Function to revers string, without String.revers(). reverse(string)', 
     describe('With recursion. reverseWithLoop(string)', () => {
         it('reverseWithRecursion("") => ""', () => {
             let result = reverseWithRecursion('');
-    
+
             assert.equal(result, '');
         });
-    
+
         it('reverseWithRecursion("abcdef") => "fedcba"', () => {
             let result = reverseWithRecursion('abcdef');
-    
+
             assert.equal(result, 'fedcba');
         });
     })
@@ -431,13 +431,13 @@ describe('Function indexOf like Array.indexOf. indexOf(array, searchElement)', (
     });
 
     it('indexOf([4,5,3,2,5,6,2], 6) => -1', () => {
-        let result = indexOf([4,5,3,2,5,6,2], 6);
+        let result = indexOf([4, 5, 3, 2, 5, 6, 2], 6);
 
         assert.equal(result, 5);
     });
 })
 
-import {isBalanced, isBalanced2, isBalancedMap} from './tasks/IsBalanced';
+import { isBalanced, isBalanced2, isBalancedMap } from './tasks/IsBalanced';
 
 describe('Function isBalanced for braces (}{), isBalanced(string)', () => {
     it("isBalanced('}{') => false", () => {
@@ -543,7 +543,7 @@ describe('Function find unique elements in array. uniqInarray(array)', () => {
     })
 
     it('uniqInarray([1,1,1,1,1,1,1,1]) => [1]', () => {
-        let result = uniqInArray([1,1,1,1,1,1,1,1]);
+        let result = uniqInArray([1, 1, 1, 1, 1, 1, 1, 1]);
 
         expect(result).to.deep.equal([1]);
     })
@@ -582,7 +582,7 @@ describe('Function permute for finding all permutation of string, permute(string
 
     it("permute('abc') => ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']", () => {
         let result = permute('abc');
-       
+
         let test = ['abc', 'acb', 'bac', 'bca', 'cab', 'cba'];
         assert.includeDeepMembers(result, test)
     })
@@ -597,46 +597,94 @@ describe('class LinkedList, LinkedList(args)', () => {
         let list = new LinkedList(1, 2, 3);
 
         it('list.add(4) => undefined', () => {
-            
+
             assert.equal(list.add(4), undefined);
 
         });
 
         it('list.add(5) => undefined', () => {
-            
+
             assert.equal(list.add(5), undefined);
 
         });
 
         it('list.add(77) => undefined', () => {
-            
+
             assert.equal(list.add(77), undefined);
 
         });
 
         it('list.has(1) => true', () => {
-        
+
             assert.equal(list.has(1), true);
 
         });
 
         it('list.has(4) => true', () => {
-            
+
             assert.equal(list.has(4), true);
 
         });
 
         it('list.has(6) => false', () => {
-            
+
             assert.equal(list.has(6), false);
 
         });
 
         it('list.has(77) => true', () => {
-            
+
             assert.equal(list.has(77), true);
 
         });
     });
+});
+
+import HashMap from './tasks/HashMap';
+
+describe('Class HashMap.', () => {
+    let map = new HashMap();
+
+    it("map.set('abc', 123); => undefined", () => {
+
+        let result = map.set('abc', 123);
+
+        expect(result).to.equal(undefined);
+    })
+
+    it("map.set('foo', 'bar') => undefined", () => {
+
+        let result = map.set('foo', 'bar');
+
+        expect(result).to.equal(undefined);
+    })
+
+    it("map.set('foo', 'baz'); => undefined", () => {
+
+        let result = map.set('foo', 'baz');
+
+        expect(result).to.equal(undefined);
+    })
+
+    it("map.get('abc'); => 123", () => {
+
+        let result = map.get('abc')
+
+        expect(result).to.equal(123);
+    })
+
+    it("map.get('foo'); => 'baz'", () => {
+
+        let result = map.get('foo');
+
+        expect(result).to.equal('baz');
+    })
+
+    it("map.get('def') ; => undefined", () => {
+
+        let result = map.get('def'); 
+
+        expect(result).to.equal(undefined);
+    })
 });
 
