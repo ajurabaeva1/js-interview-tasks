@@ -688,3 +688,58 @@ describe('Class HashMap.', () => {
     })
 });
 
+import BinarySearchTree from './tasks/BinarySearchTree';
+
+describe("Class binary search tree. let tree = new BinarySearchTree();", () => {
+    let tree = new BinarySearchTree();
+
+    it("tree.add(1,2,3,4) => undefined", () => {
+        let result = tree.add(1,2,3,4);
+
+        expect(result).to.equal(undefined);
+    })
+
+    it("tree.add(5) => undefined", () => {
+        let result = tree.add(5);
+
+        expect(result).to.equal(undefined);
+    })
+
+    it("tree.has(2) => true", () => {
+        let result = tree.has(2);
+
+        expect(result).to.equal(true);
+    })
+
+    it("tree.has(5) => true", () => {
+        let result = tree.has(5);
+
+        expect(result).to.equal(true);
+    })
+
+    it("tree.size() => 5", () => {
+        let result = tree.size();
+        console.log(tree);
+        expect(result).to.equal(5);
+    })
+
+    it("tree.remove(3) => undefined", () => {
+        let result = tree.remove(3);
+
+        expect(result).to.equal(undefined);
+    })
+
+    it("tree.has(3) => false", () => {
+        let result = tree.has(3);
+
+        expect(result).to.equal(false);
+    })
+
+    it("tree.size() => 4", () => {
+        let result = tree.size();
+
+        expect(result).to.equal(4);
+    })
+    
+});
+
