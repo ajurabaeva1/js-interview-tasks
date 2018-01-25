@@ -719,7 +719,7 @@ describe("Class binary search tree. let tree = new BinarySearchTree();", () => {
 
     it("tree.size() => 5", () => {
         let result = tree.size();
-        console.log(tree);
+       
         expect(result).to.equal(5);
     })
 
@@ -741,5 +741,48 @@ describe("Class binary search tree. let tree = new BinarySearchTree();", () => {
         expect(result).to.equal(4);
     })
     
+});
+
+import reduceAsync from './tasks/reduceAsync';
+
+describe("Function reduceAsync, take array of Promises and return pormise objects.", () => {
+    
+    var a = () => Promise.resolve('a')
+    var b = () => Promise.resolve('b');
+    var c = () => new Promise(resolve => setTimeout(() => resolve('c'), 100));
+
+    it("Initial data", () => {
+        var a = () => Promise.resolve('a')
+        var b = () => Promise.resolve('b');
+        var c = () => new Promise(resolve => setTimeout(() => resolve('c'), 100));
+    });
+
+    it("await reduceAsync([a, b, c], (acc, value) => [...acc, value], []) => ['a', 'b', 'c']", (done) => {
+        async function testReduceAsync() {
+            return await reduceAsync([a, b, c], (acc, value) => [...acc, value], []);
+        }
+
+        testReduceAsync().then(
+            data => {
+                expect(data).to.deep.equal(['a', 'b', 'c']);
+                done();
+            },
+            error => done(error)
+        );
+    })
+
+    it("await reduceAsync([a, b, c], (acc, value) => [...acc, value],  ['d']) => ['d', 'a', 'b', 'c']", (done) => {
+        async function testReduceAsync() {
+            return await reduceAsync([a, b, c], (acc, value) => [...acc, value], ['d']);
+        }
+
+        testReduceAsync().then(
+            data => {
+                expect(data).to.deep.equal(['d', 'a', 'b', 'c']);
+                done();
+            },
+            error => done(error)
+        );
+    })
 });
 
