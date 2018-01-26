@@ -682,7 +682,7 @@ describe('Class HashMap.', () => {
 
     it("map.get('def') ; => undefined", () => {
 
-        let result = map.get('def'); 
+        let result = map.get('def');
 
         expect(result).to.equal(undefined);
     })
@@ -694,7 +694,7 @@ describe("Class binary search tree. let tree = new BinarySearchTree();", () => {
     let tree = new BinarySearchTree();
 
     it("tree.add(1,2,3,4) => undefined", () => {
-        let result = tree.add(1,2,3,4);
+        let result = tree.add(1, 2, 3, 4);
 
         expect(result).to.equal(undefined);
     })
@@ -719,7 +719,7 @@ describe("Class binary search tree. let tree = new BinarySearchTree();", () => {
 
     it("tree.size() => 5", () => {
         let result = tree.size();
-       
+
         expect(result).to.equal(5);
     })
 
@@ -740,13 +740,13 @@ describe("Class binary search tree. let tree = new BinarySearchTree();", () => {
 
         expect(result).to.equal(4);
     })
-    
+
 });
 
 import reduceAsync from './tasks/reduceAsync';
 
 describe("Function reduceAsync, take array of Promises and return pormise objects.", () => {
-    
+
     var a = () => Promise.resolve('a')
     var b = () => Promise.resolve('b');
     var c = () => new Promise(resolve => setTimeout(() => resolve('c'), 100));
@@ -784,5 +784,51 @@ describe("Function reduceAsync, take array of Promises and return pormise object
             error => done(error)
         );
     })
+});
+
+import promiseSequenser from './tasks/Promise-sequenser';
+
+describe("Primise sequenser, run promises in order, promiseSequenser(promisesArray)", () => {
+    let a = () => Promise.resolve('a');
+    let b = () => Promise.resolve('b');
+    let c = () => Promise.resolve('c');
+    
+    let initMessage = [
+        "Init date: ",
+        "let a = () => Promise.resolve('a');",
+        "let b = () => Promise.resolve('b');",
+        "let c = () => Promise.resolve('c');"
+    ].join(' ');
+
+    it(initMessage, () => {
+        let a = () => Promise.resolve('a');
+        let b = () => Promise.resolve('b');
+        let c = () => Promise.resolve('c');
+    })
+
+    it("await promiseSequenser([a, b, c]).then(data => data); => data == ['a', 'b', 'c']", (done) => {
+
+        promiseSequenser([a, b, c]).then(
+            data => {
+                expect(data).to.deep.equal(['a', 'b', 'c']);
+                done();
+            },
+            error => done(error)
+        );
+
+    });
+
+    it("await promiseSequenser([a, c, b]).then(data => data); => data == ['a', 'c', 'b']", (done) => {
+        
+                promiseSequenser([a, c, b]).then(
+                    data => {
+                        expect(data).to.deep.equal(['a', 'c', 'b']);
+                        done();
+                    },
+                    error => done(error)
+                );
+        
+            });
+
 });
 
