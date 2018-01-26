@@ -1,6 +1,6 @@
 ## Job interview for the Front-End developer position
 
-#### Searce article on [habrahabr.ru](https://habrahabr.ru/company/ruvds/blog/334538/)
+#### Searce article on [Собеседование для фронтенд-разработчика на JavaScript: самые лучшие вопросы](https://habrahabr.ru/company/ruvds/blog/334538/)
 
 ### Installation
 #### Clone repository
@@ -61,8 +61,7 @@ isSorted([]);                       // true
 isSorted([-Infinity, -5, 0, 3, 9]); // true
 isSorted([3, 9, -3, 10]);           // false
 ```
-7. Function isPalindrome return true if string is palindrome, false if not [code]
-(https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Is-Palindrome.js)
+7. Function isPalindrome return true if string is palindrome, false if not [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Is-Palindrome.js)
 ```
 isPalindrome("abcdcba");                     // true
 isPalindrome("abcd"q('BCBDC');  // 'B'
