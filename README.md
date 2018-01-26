@@ -1,4 +1,4 @@
-## Tasks on Front-End interview of JavaScript
+## Job interview for the Front-End developer position
 
 #### Searce article on [habrahabr.ru](https://habrahabr.ru/company/ruvds/blog/334538/)
 
