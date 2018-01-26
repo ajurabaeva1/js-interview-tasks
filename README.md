@@ -23,7 +23,7 @@ add(1)(2); // 3
 uniq('ABCDA');  // 'A'
 uniq('BCBDC');  // 'B'
 ```
-3. Function isPrime(number), return true if number is prime, if not - false [code]()https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Is-prime.js
+3. Function isPrime(number), return true if number is prime, if not - false [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Is-prime.js)
 ```
 isPrime(-1); // false
 isPrime(17); // true
@@ -198,3 +198,4 @@ let c = () => Promise.resolve('c');
 
 promiseSequenser([a, b, c]).then(data => data); // data == ['a', 'b', 'c']
 promiseSequenser([a, c, b]).then(data => data); // data == ['a', 'c', 'b']
+```
