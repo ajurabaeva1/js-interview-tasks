@@ -64,8 +64,7 @@ isSorted([3, 9, -3, 10]);           // false
 7. Function isPalindrome return true if string is palindrome, false if not [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Is-Palindrome.js)
 ```
 isPalindrome("abcdcba");                     // true
-isPalindrome("abcd"q('BCBDC');  // 'B'
-    ```);                        // false
+isPalindrome("abcd");                        // false
 isPalindrome("A man a plan a canal Panama"); // true
 ```
 8. Function missing return number that not exist in sequence [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Missing.js)
