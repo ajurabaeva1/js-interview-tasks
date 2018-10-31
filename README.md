@@ -1,6 +1,6 @@
 ## Job interview for the Front-End developer position
 
-#### Searce article on [Собеседование для фронтенд-разработчика на JavaScript: самые лучшие вопросы](https://habrahabr.ru/company/ruvds/blog/334538/)
+#### Article [Собеседование для фронтенд-разработчика на JavaScript: самые лучшие вопросы](https://habrahabr.ru/company/ruvds/blog/334538/)
 
 ### Installation
 #### Clone repository
