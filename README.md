@@ -18,10 +18,10 @@ npm i && npm run build && npm run test
 add(1,2);  // 3
 add(1)(2); // 3
 ```
-2. Find unique charaster in string  [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Uniq-with-hash.js)
+2. Find unique characters in string  [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Uniq-with-hash.js)
 ```
-uniq('ABCDA');  // 'A'
-uniq('BCBDC');  // 'B'
+uniq('ABCDA');  // 'ABCD'
+uniq('BCBDC');  // 'BCD'
 ```
 3. Function isPrime(number), return true if number is prime, if not - false [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Is-prime.js)
 ```
