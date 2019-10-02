@@ -15,7 +15,7 @@ npm i && npm run build && npm run test
 
 1. Add two numbers [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Add-function.js)
 
-```
+```javascript
 function add(a,b) {
     if(b) {
         return a + b;
@@ -26,12 +26,13 @@ function add(a,b) {
 }
 
 export default add;
-
+```
+```
 add(1,2);  // 3
 add(1)(2); // 3
 ```
 2. Find unique characters in string  [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Uniq-with-hash.js)
-```
+```javascript
   
 function uniqHash(string) {
     let hash = {};
@@ -66,7 +67,7 @@ isPrime(-1); // false
 isPrime(17); // true
 isPrime(6);  // false
 ```
-```
+```javascript
 
 function isPrime(number) {
     if(number <= 0) return false;
@@ -79,18 +80,19 @@ function isPrime(number) {
 export default isPrime;
 
 4. Calculate Fibonacci number [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Fibonacci.js)
-    ```
+    
     /**
  * Calculate fibonacci number with recurtion
  */
-
+```javascript
 const fibRecursion = function fibonacci(number) {
     return number <= 1 ? number: fibonacci(number - 1) + fibonacci(number - 2);
 };
-
+```
 /**
  * Calculate fibonacci number with loop
  */
+ ```javascript
 const fibLoop = number => {
     if(number === 0 || number === 1) return number;
     let a = 1,
@@ -101,10 +103,11 @@ const fibLoop = number => {
     }
     return b;
 }
-
+```
 /**
  * Calculate fibonacci number with memoization for best performance
  */
+ ```javascript
 const longFib = (function() {
     let cache = {};
     function fibonacci(number) {
@@ -126,12 +129,13 @@ const longFib = (function() {
 })();
 
 export {fibRecursion, fibLoop, longFib};
+```
     
     
 5. Function filter for array like [Array.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/My-filter.js)
     - Like function 
-    ```
+    ```javascript
     const filter = (array, fn) => {
     let result = [];
     array.forEach(el => {
@@ -143,7 +147,8 @@ export {fibRecursion, fibLoop, longFib};
     filter([1,2,3,4], n => n < 3); // [1, 2]
     ```
     - Like Array.prototype
-    ```
+    
+    ```javascript
     const myFilter = (function(){
     if(!Array.prototype.myFilter) {
         Array.prototype.myFilter = function(fn) {
@@ -163,7 +168,7 @@ export {filter};
     [1,2,3,4].myFilter(n => n < 3); // [1,2]
     ```
 6. Function isSorted return true if array is sorted, false if not [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Issorted.js)
-```
+```javascript
 function isSorted(array) {
 
     let tmp = Array.from(array);
@@ -179,7 +184,7 @@ isSorted([-Infinity, -5, 0, 3, 9]); // true
 isSorted([3, 9, -3, 10]);           // false
 ```
 7. Function isPalindrome return true if string is palindrome, false if not [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Is-Palindrome.js)
-```
+```javascript
 const pipe = (...actions) => 
     items => 
          actions.reduce((prev_action, action) => action(prev_action), items);
@@ -214,7 +219,7 @@ isPalindrome("abcd");                        // false
 isPalindrome("A man a plan a canal Panama"); // true
 ```
 8. Function missing return number that not exist in sequence [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Missing.js)
-```
+```javascript
 function missing(array) {
     let res = 'undefined';
     for (let i = 1; i <= array.length; i++) {
@@ -251,7 +256,11 @@ missing([2, 3, 7, 6, 1, 4]); // 5
     reverseWithRecursion("");       // ""
     reverseWithRecursion("abcdef"); // "fedcba"
     ```
-    ```
+    
+    
+    - With Array (split,reduce,join)
+    
+    ```javascript
     function reverse(string) {
     if (!string) return '';
     return string
@@ -259,7 +268,10 @@ missing([2, 3, 7, 6, 1, 4]); // 5
         .reduceRight((prev, next) => prev.concat(next), [])
         .join('');
 };
+```
+- With loop
 
+```javascript
 function reverseWithLoop(string) {
     if (!string) return '';
     let result = '';
@@ -270,7 +282,10 @@ function reverseWithLoop(string) {
     }
     return result;
 }
+```
+- With recursion
 
+```javascript
 const reverseWithRecursion = function reverseRec(string) {
     return (string === '') ?
         '' :
@@ -279,10 +294,10 @@ const reverseWithRecursion = function reverseRec(string) {
 
 
 export { reverse, reverseWithLoop, reverseWithRecursion };
-    ```
+ ```
 10. Function indexOf like [Array.indexOf](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/IndexOf.js)
-```
+```javascript
 function indexOf(array, searchEl) {
     let result = -1;
     if(!array.length) return result;
@@ -301,7 +316,7 @@ indexOf([1, 2, 3], 4);       // -1
 indexOf([4,5,3,2,5,6,2], 6); // -1
 ```
 11. Function isBalanced for string with braces }{ [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/IsBalanced.js)
-```
+```javascript
 
 function isBalancedStatick(string, openBracket, closeBracket) {
     let result = false;
@@ -371,8 +386,9 @@ isBalanced('{}{{}}');                  // true
 isBalanced('a{}}sdfas}asdf');          // false
 isBalanced('foo { bar { baz } boo }'); // true
 ```
+
 12. Function isBalanced2 like isBalanced, but work with }{, ][ [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/IsBalanced.js)
-```
+```javascript
 function isBalancedStatick(string, openBracket, closeBracket) {
     let result = false;
     if(!string) return result;
@@ -441,7 +457,7 @@ isBalanced2('foo { bar { baz } boo }');   // true
 isBalanced2('(foo { bar (baz) [boo] })'); // true
 ```
 13. Function return array of unique elements of source array [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Uniq-for-array.js)
-```
+```javascript
 function uniqInArray(array) {
     let result = [];
     array.forEach(el => {
@@ -459,7 +475,7 @@ uniqInarray([1, 4, 2, 2, 3, 4, 8]);  // [1, 4, 2, 3, 8]
 uniqInarray([1,1,1,1,1,1,1,1]);      // [1]
 ```
 14. Function return Intersection of two arrays [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Intersection.js)
-```
+```javascript
 
 function intersection(array_1, array_2) {
     let big, small;
@@ -489,7 +505,7 @@ intersection([], [7, 12]);                      // []
 ```
 15. Function permute for finding all permutation of string. Used [Heap's algorithm](https://en.wikipedia.org/wiki/Heap%27s_algorithm)
 [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Permute.js)
-```
+```javascript
 //used Heap's algorithm https://en.wikipedia.org/wiki/Heap%27s_algorithm
 function permute(string) {
     let store = [];
@@ -525,7 +541,7 @@ permute('abc'); // ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
 ```
 16. Create class [Linked list](https://en.wikipedia.org/wiki/Linked_list) [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/LikedList.js)
     - class have only two methods: add (add data to liks), has (return true if data exist in list, false - if not)
-```
+```javascript
 class LinkedList {
     constructor(...args) {
         this.head = {};
@@ -575,7 +591,7 @@ list.has(6) => false
         - get(key) - return data for key
 
 #### Hash function :
-```
+```javascript
 function hash (string) {
   return string
     .split('')
@@ -586,10 +602,11 @@ function hash (string) {
 const HASH_FN = string => string
     .split('')
     .reduce((a, b) => ((a << 5) + a) + b.charCodeAt(0), 5381);
-
+```
 /**
  * With JavaScript Object ({})
  */
+ ```javascript
 // class HashMap {
 //     constructor() {
 //         this.store = {};
@@ -601,9 +618,12 @@ const HASH_FN = string => string
 //         return this.store[HASH_FN(key)];
 //     }
 // }
+```
 /**
  * Without JavaScript Object ({})
  */
+ 
+```javascript 
 class HashMap {
     constructor() {
         this.store = [];
@@ -630,25 +650,9 @@ map.get('abc');        // 123
 map.get('foo');        // 'bar'
 map.get('def');        // undefined
 ```
-18. Create class [Binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree)
-[code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/BinarySearchTree.js)
-    - Methods
-        - add(values), add data to tree
-        - has(value), return true if value exist in tree, false if not
-        - remove(value), delete value from tree
-        - size(), return number of tree size
-``` 
-tree.add(1,2,3,4);  // undefined
-tree.add(5);        // undefined
-tree.has(2);        // true
-tree.has(5);        // true
-tree.size();        // 5
-tree.remove(3);     // undefined
-tree.has(3);        // false
-tree.size();        // 4
-```
+
 19. Function reduceAsync(arrayOfPromises, callback, initialValue) like Array.reduce() ,  [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/reduceAsync.js)
-```
+```javascript
 var a = () => Promise.resolve('a')
 var b = () => Promise.resolve('b');
 var c = () => new Promise(resolve => setTimeout(() => resolve('c'), 100));
@@ -671,7 +675,7 @@ export default reduceAsync;
 
 ```
 20. Function promiseSequenser(arrayOfPromises), resolve promises in order [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Promise-sequenser.js)
-```
+```javascript
 let a = () => Promise.resolve('a');
 let b = () => Promise.resolve('b');
 let c = () => Promise.resolve('c');
