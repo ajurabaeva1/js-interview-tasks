@@ -78,6 +78,7 @@ function isPrime(number) {
 }
 
 export default isPrime;
+```
 
 4. Calculate Fibonacci number [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Fibonacci.js)
     
@@ -146,8 +147,11 @@ export {fibRecursion, fibLoop, longFib};
 
     filter([1,2,3,4], n => n < 3); // [1, 2]
     ```
-    - Like Array.prototype
-    
+    ```
+- Like Array.prototype
+  ```
+   
+   
     ```javascript
     const myFilter = (function(){
     if(!Array.prototype.myFilter) {
@@ -164,9 +168,9 @@ export {fibRecursion, fibLoop, longFib};
 export {filter};
 
 //n => n < 3;
+```
 
-    [1,2,3,4].myFilter(n => n < 3); // [1,2]
-    ```
+
 6. Function isSorted return true if array is sorted, false if not [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Issorted.js)
 ```javascript
 function isSorted(array) {
@@ -257,8 +261,10 @@ missing([2, 3, 7, 6, 1, 4]); // 5
     reverseWithRecursion("abcdef"); // "fedcba"
     ```
     
-    
+    ```
     - With Array (split,reduce,join)
+    ```
+    
     
     ```javascript
     function reverse(string) {
@@ -269,7 +275,9 @@ missing([2, 3, 7, 6, 1, 4]); // 5
         .join('');
 };
 ```
+```
 - With loop
+```
 
 ```javascript
 function reverseWithLoop(string) {
@@ -283,7 +291,10 @@ function reverseWithLoop(string) {
     return result;
 }
 ```
+
+```
 - With recursion
+```
 
 ```javascript
 const reverseWithRecursion = function reverseRec(string) {
