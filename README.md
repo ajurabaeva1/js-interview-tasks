@@ -259,24 +259,15 @@ missing([2, 3, 7, 6, 1, 4]); // 5
     reverseWithRecursion("abcdef"); // "fedcba"
     ```
     
-    ```
-    - With Array (split,reduce,join)
-    ```
-    
     
     ```javascript
-    function reverse(string) {
+function reverse(string) {
     if (!string) return '';
     return string
         .split('')
         .reduceRight((prev, next) => prev.concat(next), [])
         .join('');
 };
-```
-```
-- With loop
-```
-```javascript
 
 function reverseWithLoop(string) {
     if (!string) return '';
@@ -289,16 +280,6 @@ function reverseWithLoop(string) {
     return result;
 }
 
-```
-```
-
-
-
-```
-- With recursion
-```
-
-```javascript
 const reverseWithRecursion = function reverseRec(string) {
     return (string === '') ?
         '' :
@@ -307,7 +288,8 @@ const reverseWithRecursion = function reverseRec(string) {
 
 
 export { reverse, reverseWithLoop, reverseWithRecursion };
- ```
+```
+
 10. Function indexOf like [Array.indexOf](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/IndexOf.js)
 ```javascript
