@@ -259,8 +259,11 @@ missing([2, 3, 7, 6, 1, 4]); // 5
     reverseWithRecursion("abcdef"); // "fedcba"
     ```
     
-    
-    ```javascript
+  -code
+
+
+```javascript
+
 function reverse(string) {
     if (!string) return '';
     return string
@@ -289,6 +292,8 @@ const reverseWithRecursion = function reverseRec(string) {
 
 export { reverse, reverseWithLoop, reverseWithRecursion };
 ```
+
+
 
 10. Function indexOf like [Array.indexOf](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/IndexOf.js)
