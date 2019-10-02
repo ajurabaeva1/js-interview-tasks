@@ -150,9 +150,7 @@ export {fibRecursion, fibLoop, longFib};
     ```
 - Like Array.prototype
   ```
-   
-   
-    ```javascript
+```javascript
     const myFilter = (function(){
     if(!Array.prototype.myFilter) {
         Array.prototype.myFilter = function(fn) {
