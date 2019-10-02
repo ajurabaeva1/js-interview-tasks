@@ -79,18 +79,19 @@ function isPrime(number) {
 export default isPrime;
 ```
 4. Calculate Fibonacci number [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Fibonacci.js)
-    - Fibonacci with recursion 
     ```
-    const fibRecursion = function fibonacci(number) {
+    /**
+ * Calculate fibonacci number with recurtion
+ */
+
+const fibRecursion = function fibonacci(number) {
     return number <= 1 ? number: fibonacci(number - 1) + fibonacci(number - 2);
 };
 
-    fibRecursion(0);  // 0
-    fibRecursion(10); // 55
-    ```
-    - Fibonacci with loop
-    ```
-    const fibLoop = number => {
+/**
+ * Calculate fibonacci number with loop
+ */
+const fibLoop = number => {
     if(number === 0 || number === 1) return number;
     let a = 1,
         b = 1;
@@ -100,12 +101,11 @@ export default isPrime;
     }
     return b;
 }
-    fibLoop(1);  // 1
-    fibLoop(10); // 55
-    ```
-    - Fibonacci with memoization, for big numbers
-    ```
-    const longFib = (function() {
+
+/**
+ * Calculate fibonacci number with memoization for best performance
+ */
+const longFib = (function() {
     let cache = {};
     function fibonacci(number) {
         let result;
@@ -126,8 +126,7 @@ export default isPrime;
 })();
 
 export {fibRecursion, fibLoop, longFib};
-    longFib(50);  // 12586269025
-    longFib(500); // 1.394232245616977e+104 !
+    
     ```
 5. Function filter for array like [Array.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/My-filter.js)
