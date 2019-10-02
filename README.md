@@ -276,7 +276,6 @@ missing([2, 3, 7, 6, 1, 4]); // 5
 ```
 - With loop
 ```
-
 ```javascript
 function reverseWithLoop(string) {
     if (!string) return '';
