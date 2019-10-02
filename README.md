@@ -277,7 +277,7 @@ missing([2, 3, 7, 6, 1, 4]); // 5
 - With loop
 ```
 ```javascript
-function reverseWithLoop(string) {
+   function reverseWithLoop(string) {
     if (!string) return '';
     let result = '';
     let i = string.length - 1;
@@ -288,6 +288,8 @@ function reverseWithLoop(string) {
     return result;
 }
 ```
+
+
 
 ```
 - With recursion
