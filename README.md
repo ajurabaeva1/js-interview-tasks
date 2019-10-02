@@ -77,7 +77,7 @@ function isPrime(number) {
 }
 
 export default isPrime;
-```
+
 4. Calculate Fibonacci number [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/Fibonacci.js)
     ```
     /**
@@ -127,7 +127,7 @@ const longFib = (function() {
 
 export {fibRecursion, fibLoop, longFib};
     
-    ```
+    
 5. Function filter for array like [Array.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 [code](https://github.com/rodiosheek/js-interview-tasks/blob/master/tasks/My-filter.js)
     - Like function 
